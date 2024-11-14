@@ -1,18 +1,15 @@
+'use client';
+
+import { useState } from 'react';
+import Intro from './components/intro';
+
 export default function Home() {
+  const [content, setContent] = useState(<Intro />);
+
   return (
     <main className="flex h-screen">
-      <div className="w-[60%] bg-white p-8">
-        <div className="grid grid-rows-6 h-full">
-          <div className="row-span-1"></div>
-          <div className="row-span-1 text-center flex flex-col items-end text-stone-800">
-            <div className="text-9xl font-bold mr-32"><span className="text-xl">Hey👋, I am</span> Maciej</div>
-            <div className="text-9xl font-bold mr-32">Kasztelanic</div>
-            <div className="text-xl font-bold mr-32">Data Science | Business Analytics | Pricing </div>
-          </div>
-          <div className="row-span-1"></div>
-          <div className="row-span-1"></div>
-          <div className="row-span-1"></div>
-        </div>
+      <div className="w-[60%] bg-white p-4">
+        {content}
       </div>
 
       <div className="w-[40%] bg-white p-4">
@@ -54,9 +51,8 @@ export default function Home() {
             </svg>
             <span className="text-white font-semibold">MAIL</span>
           </a>
-          <a 
-            href="https://example.com/3" 
-            className="col-span-2 row-span-2 border-2 border-black rounded-xl bg-red-500 flex flex-col items-center justify-center gap-1"
+          <div 
+            className="col-span-2 row-span-2 border-2 border-black rounded-xl bg-red-500 flex flex-col items-center justify-center gap-1 group relative"
           >
             <svg 
               className="w-12 h-12 text-white" 
@@ -67,7 +63,11 @@ export default function Home() {
               <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
             </svg>
             <span className="text-white font-semibold">WORK PROJECTS</span>
-          </a>
+            <div className="absolute left-0 w-full bg-red-500 text-white rounded-md hidden group-hover:block text-center text-xl font-bold">
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">Dynamic Pricing</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">PowerBi Dashboard</a>
+            </div>
+          </div>
           <div className="col-span-2 border-2 border-black rounded-xl flex flex-col items-center justify-center">
             <svg 
               className="w-12 h-12 text-black" 
@@ -77,7 +77,7 @@ export default function Home() {
             >
               <path d="M12 2C8.13 2 5 5.13 5 9c0 3.54 7 11 7 11s7-7.46 7-11c0-3.87-3.13-7-7-7zm0 15c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
             </svg>
-            <span className="text-stone-800 font-semibold">Warsaw, Poland</span> {/* Added span for location */}
+            <span className="text-stone-800 text-2xl font-semibold">Warsaw, Poland</span>
           </div>
           <a 
             href="https://example.com/4" 
@@ -114,9 +114,8 @@ export default function Home() {
             </svg>
             <span className="text-white font-semibold">GITHUB</span>
           </a>
-          <a 
-            href="https://example.com/6" 
-            className="col-span-2 row-span-2 border-2 border-black rounded-xl bg-green-600 flex flex-col items-center justify-center gap-1"
+          <div
+            className="col-span-2 row-span-2 border-2 border-black rounded-xl bg-green-600 flex flex-col items-center justify-center gap-1 group relative"
           >
             <svg 
               className="w-12 h-12 text-white" 
@@ -127,7 +126,12 @@ export default function Home() {
               <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
             </svg>
             <span className="text-white font-semibold">ML PROJECTS</span>
-          </a>
+            <div className="absolute left-0 w-full bg-green-600 text-white rounded-md hidden group-hover:block text-center text-xl font-bold">
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">Store Sales Forecast</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">GPT2 Training</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">Unsupervised Learning</a>
+            </div>
+          </div>
           <div className="col-span-1 row-span-2 h-full">
             <div className="grid grid-cols-2 grid-rows-4 gap-2 h-full">
               <div className="border-2 border-black rounded-xl col-span-1 row-span-1 flex flex-col items-center justify-center gap-1">
@@ -186,9 +190,8 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-1 row-span-1 border-2 border-black rounded-xl"></div>
-          <a 
-            href="https://example.com/7" 
-            className="col-span-3 row-span-1 border-2 border-black rounded-xl bg-amber-400 flex flex-col items-center justify-center gap-1"
+          <div 
+            className="col-span-3 row-span-1 border-2 border-black rounded-xl bg-amber-400 flex flex-col items-center justify-center gap-1 group relative"
           >
             <svg 
               className="w-12 h-12 text-white" 
@@ -199,7 +202,11 @@ export default function Home() {
               <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/>
             </svg>
             <span className="text-white font-semibold">PERSONAL PROJECTS</span>
-          </a>
+            <div className="absolute left-0 w-full bg-amber-400 text-white rounded-md hidden group-hover:block text-center text-xl font-bold">
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">Paint By Numbers Generator</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800">Synthetic Data Generator</a>
+            </div>
+          </div>
           <img src="/ja.jpg" className="col-span-1 row-span-1 border-2 border-black rounded-xl"></img>
         </div>
       </div>
