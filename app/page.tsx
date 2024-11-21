@@ -2,17 +2,27 @@
 
 import { useState } from 'react';
 import Intro from './components/intro';
+import PBNProject from './components/projects/pbn';
+import SalesProject from './components/projects/store_sales';
+import DashboardProject from './components/projects/dashboard';
+import DPProject from './components/projects/dp';
+import ULProject from './components/projects/ul';
+import SDProject from './components/projects/generator';
 
 export default function Home() {
   const [content, setContent] = useState(<Intro />);
 
+  const handleProjectClick = (projectComponent: JSX.Element) => {
+    setContent(projectComponent);
+  };
+
   return (
-    <main className="flex h-screen">
-      <div className="w-[60%] bg-white p-4">
+    <main className="flex flex-col h-screen md:flex-row">
+      <div className="w-full md:w-[60%] bg-white p-4 overflow-y-auto max-h-screen">
         {content}
       </div>
 
-      <div className="w-[40%] bg-white p-4">
+      <div className="w-full md:w-[40%] bg-white p-4">
         <div className="grid h-full gap-4 grid-cols-4 grid-rows-[repeat(6,1fr)]">
           <a 
             href="https://www.linkedin.com/in/maciej-kasztelanic-960556247/" 
@@ -64,8 +74,20 @@ export default function Home() {
             </svg>
             <span className="text-white font-semibold">WORK PROJECTS</span>
             <div className="absolute left-0 w-full bg-red-500 text-white rounded-md hidden group-hover:block text-center text-xl font-bold">
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">Dynamic Pricing</a>
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">PowerBi Dashboard</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800 h-1/2" onClick={() => handleProjectClick(<DPProject />)}>Dynamic Pricing
+                <div className="text-stone-800 text-sm">
+                  <span className="block">Python</span>
+                  <span className="block">SQL</span>
+                  <span className="block">BigQuery</span>
+                </div>
+              </a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800 h-1/2" onClick={() => handleProjectClick(<DashboardProject />)}>PowerBi Dashboard
+                <div className="text-stone-800 text-sm">
+                  <span className="block">PowerBI</span>
+                  <span className="block">SQL</span>
+                  <span className="block">BigQuery</span>
+                </div>
+              </a>
             </div>
           </div>
           <div className="col-span-2 border-2 border-black rounded-xl flex flex-col items-center justify-center">
@@ -127,9 +149,20 @@ export default function Home() {
             </svg>
             <span className="text-white font-semibold">ML PROJECTS</span>
             <div className="absolute left-0 w-full bg-green-600 text-white rounded-md hidden group-hover:block text-center text-xl font-bold">
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">Store Sales Forecast</a>
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">GPT2 Training</a>
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">Unsupervised Learning</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800" onClick={() => handleProjectClick(<SalesProject />)}>Store Sales Forecast
+                <div className="text-stone-800 text-sm"> {/* Tools for Store Sales Forecast */}
+                  <span className="block">Python</span>
+                  <span className="block">XGBoost</span>
+                  <span className="block">Polars</span>
+                </div>
+              </a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800" onClick={() => handleProjectClick(<ULProject />)}>Unsupervised Learning
+                <div className="text-stone-800 text-sm"> {/* Tools for Unsupervised Learning */}
+                  <span className="block">R</span>
+                  <span className="block">dplyr</span>
+                  <span className="block">cluster</span>
+                </div>
+              </a>
             </div>
           </div>
           <div className="col-span-1 row-span-2 h-full">
@@ -203,8 +236,17 @@ export default function Home() {
             </svg>
             <span className="text-white font-semibold">PERSONAL PROJECTS</span>
             <div className="absolute left-0 w-full bg-amber-400 text-white rounded-md hidden group-hover:block text-center text-xl font-bold">
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">Paint By Numbers Generator</a>
-              <a href="#" className="block p-2 hover:bg-white text-stone-800">Synthetic Data Generator</a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800" onClick={() => handleProjectClick(<PBNProject />)}>
+                Paint By Numbers Generator
+                <div className="text-stone-800 text-sm">
+                  <span className="block">Python, scikit-learn, openCV</span>
+                </div>
+              </a>
+              <a href="#" className="block p-2 hover:bg-white text-stone-800" onClick={() => handleProjectClick(<SDProject />)}>Synthetic Data Generator
+                <div className="text-stone-800 text-sm"> {/* Tools for Synthetic Data Generator */}
+                  <span className="block">Python, polars, pydantic</span>
+                </div>
+              </a>
             </div>
           </div>
           <img src="/ja.jpg" className="col-span-1 row-span-1 border-2 border-black rounded-xl"></img>
