@@ -21,7 +21,7 @@ const SDProject = () => {
         </div>
         <div className="mb-4">
             <span className="font-semibold">Research:</span>
-            <div>There are plenty of synthetic data generation tools available, but they all require existing data, which I couldn't find. While I understand that real-world market distributions are unknown, we can imagine any distribution, add some noise, and create our own unique distributions. I also realized it would be beneficial to create an <b>orders dataset</b> with items provided by the user. To incorporate more factors, these items can vary by <b>name, price, and popularity</b> (which influences the item distribution).</div>
+            <div>There are plenty of synthetic data generation tools available, but they all require existing data, which I couldnt find. While I understand that real-world market distributions are unknown, we can imagine any distribution, add some noise, and create our own unique distributions. I also realized it would be beneficial to create an <b>orders dataset</b> with items provided by the user. To incorporate more factors, these items can vary by <b>name, price, and popularity</b> (which influences the item distribution).</div>
         </div>
         <div className="mb-4">
             <span className="font-semibold">Approach:</span>

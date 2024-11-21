@@ -20,7 +20,7 @@ const DashboardProject = () => {
 
         <div className="mb-4">
             <span className="font-semibold">Context:</span>
-            <div>To support the Growth Team in analyzing new add-on products such as PlentiCare (insurance), Return Without Cleaning, Games, and others, I took ownership of the entire development process for a data-driven solution. Leveraging <b>Power BI</b>, along with <b>Power Query</b> and <b>DAX</b>, and integrating data from a <b>BigQuery</b> database hosted on <b>Google Cloud Platform (GCP)</b>, I designed and implemented an intuitive and interactive dashboard. This solution enables straightforward analysis of the new data, empowering stakeholders to make informed decisions with ease. My leadership in this project ensured seamless functionality, clarity, and actionable insights, aligning with the team's objectives.</div>
+            <div>To support the Growth Team in analyzing new add-on products such as PlentiCare (insurance), Return Without Cleaning, Games, and others, I took ownership of the entire development process for a data-driven solution. Leveraging <b>Power BI</b>, along with <b>Power Query</b> and <b>DAX</b>, and integrating data from a <b>BigQuery</b> database hosted on <b>Google Cloud Platform (GCP)</b>, I designed and implemented an intuitive and interactive dashboard. This solution enables straightforward analysis of the new data, empowering stakeholders to make informed decisions with ease. My leadership in this project ensured seamless functionality, clarity, and actionable insights, aligning with the teams objectives.</div>
         </div>
         <div className="mb-4">
             <span className="font-semibold">Research:</span>
@@ -42,7 +42,7 @@ const DashboardProject = () => {
         </div>
         <div className="mb-4">
             <span className="font-semibold">Outcome:</span>
-            <div>The dashboard provided actionable insights that transformed decision-making. The data revealed that the majority of insurance purchases were made by B2B clients, highlighting a critical target audience for this product. Additionally, the analysis uncovered that lower price points were leading to losses, prompting a strategic adjustment to increase prices. This change not only addressed profitability concerns but also aligned the product's pricing strategy with its value proposition. These insights underscored the importance of data-driven decisions and demonstrated the effectiveness of the dashboard in guiding business growth.</div>
+            <div>The dashboard provided actionable insights that transformed decision-making. The data revealed that the majority of insurance purchases were made by B2B clients, highlighting a critical target audience for this product. Additionally, the analysis uncovered that lower price points were leading to losses, prompting a strategic adjustment to increase prices. This change not only addressed profitability concerns but also aligned the products pricing strategy with its value proposition. These insights underscored the importance of data-driven decisions and demonstrated the effectiveness of the dashboard in guiding business growth.</div>
         </div>
         </div>
     );

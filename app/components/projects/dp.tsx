@@ -8,7 +8,7 @@ const DPProject = () => {
 
         <div className="mb-4">
             <span className="font-semibold">Context:</span>
-            <div>To support the rapid expansion of a startup's product portfolio and meet the increasing capital demands, I was tasked with developing a <b>dynamic pricing model</b> tailored to the evolving <b>electronics rental market in Europe</b>. As this market is relatively new, consumer price sensitivity and willingness to pay were largely uncharted. The goal was to design a pricing system that adapts to <b>market conditions</b>, <b>warehouse inventory levels</b>, and other critical factors, ensuring competitive yet profitable pricing strategies in a dynamic environment. This project addressed the need for <b>flexibility and scalability</b> in pricing to drive both customer acquisition and operational efficiency.</div>
+            <div>To support the rapid expansion of a startups product portfolio and meet the increasing capital demands, I was tasked with developing a <b>dynamic pricing model</b> tailored to the evolving <b>electronics rental market in Europe</b>. As this market is relatively new, consumer price sensitivity and willingness to pay were largely uncharted. The goal was to design a pricing system that adapts to <b>market conditions</b>, <b>warehouse inventory levels</b>, and other critical factors, ensuring competitive yet profitable pricing strategies in a dynamic environment. This project addressed the need for <b>flexibility and scalability</b> in pricing to drive both customer acquisition and operational efficiency.</div>
         </div>
         <div className="mb-4">
             <span className="font-semibold">Research:</span>
