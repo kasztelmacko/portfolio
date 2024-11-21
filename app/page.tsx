@@ -18,11 +18,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-col h-screen md:flex-row">
-      <div className="w-full md:w-[60%] bg-white p-4 overflow-y-auto max-h-screen">
+      <div className="w-full bg-white p-4 overflow-y-auto max-h-screen md:w-[60%]">
         {content}
       </div>
 
-      <div className="w-full md:w-[40%] bg-white p-4">
+      <div className="w-full bg-white p-4 md:w-[40%] md:order-1 order-2">
         <div className="grid h-full gap-4 grid-cols-4 grid-rows-[repeat(6,1fr)]">
           <a 
             href="https://www.linkedin.com/in/maciej-kasztelanic-960556247/" 
@@ -102,7 +102,7 @@ export default function Home() {
             <span className="text-stone-800 text-2xl font-semibold">Warsaw, Poland</span>
           </div>
           <a 
-            href="https://example.com/4" 
+            href="https://drive.google.com/drive/folders/1Q_R8gLd9V3b76Iukz3o8jrh64qaX8W8B?usp=drive_link" 
             className="col-span-2 row-start-2 border-2 border-black rounded-xl bg-slate-400 flex flex-col items-center justify-center gap-1"
           >
             <svg 
