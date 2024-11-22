@@ -1,6 +1,3 @@
-import { useState } from "react";
-import Experience from "./experience";
-
 const Intro = () => {
     return (
       <div className="grid grid-rows-6 grid-cols-3 h-full">
