@@ -8,6 +8,7 @@ import DashboardProject from './components/projects/dashboard';
 import DPProject from './components/projects/dp';
 import ULProject from './components/projects/ul';
 import SDProject from './components/projects/generator';
+import Experience from './components/experience';
 
 export default function Home() {
   const [content, setContent] = useState(<Intro />);
@@ -115,7 +116,20 @@ export default function Home() {
             </svg>
             <span className="text-white font-semibold">CV</span>
           </a>         
-          <div className="col-span-1 row-span-1 border-2 border-black rounded-xl"></div>
+          <div 
+            onClick={() => handleProjectClick(<Experience />)}
+            className="col-span-1 row-span-1 border-2 border-black rounded-xl bg-violet-600 flex flex-col items-center justify-center gap-1 cursor-pointer"
+          >
+            <svg 
+              className="w-8 h-8 text-white" 
+              viewBox="0 0 24 24" 
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+            </svg>
+            <span className="text-white font-semibold">EXPERIENCE</span>
+          </div>
           <a 
             href="https://github.com/kasztelmacko" 
             target="_blank"
